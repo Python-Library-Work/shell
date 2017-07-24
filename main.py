@@ -25,6 +25,15 @@ __author__ = "Python Works"
 # Repos of Shell
 #__git__ = "https://github.com/Python-Library-Work/shell.git"
 #############################################################
+try:
+    checkfolder = open('./Users/.main.txt', 'r')
+    checkfolder.read()
+    checkfolder.close()
+    print("[*] Users folders dectected !!!")
+except:
+    os.system("mkdir ./Users")
+    checkfolder = open('./Users/.main.txt')
+    checkfolder.close()
 
 def __init_shell__():
     print("[*] Shell Version: "+ __version__)
